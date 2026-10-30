@@ -1,0 +1,109 @@
+{
+  "description": "Real seller-related actions from my Muse logs (drafts and one tracker update), sanitized. Labels as recorded by Muse; see notes.",
+  "records": [
+    {
+      "id": "seller-01",
+      "label": "ok",
+      "note": "Drafted Oct 18, 2026 for a Depop 'not as described' dispute, saved in workspace/depop-response-draft-2026-10-18.md. Whether you sent it in the app is unconfirmed in the logs. This was the recommended of the two drafts.",
+      "action": {
+        "type": "send_message",
+        "text": "Hi, sorry the item was not what you expected. I am happy to make it right: if you return it in the condition it arrived, I will refund you in full as soon as it gets back to me. Let me know if that works for you, and thank you for flagging it quickly.",
+        "claims": []
+      },
+      "context": {
+        "seller": {
+          "address": "PLACEHOLDER ADDRESS",
+          "confirmed_available_today": false
+        },
+        "thread": {
+          "pending_pickup": false
+        }
+      }
+    },
+    {
+      "id": "seller-02",
+      "label": "ok",
+      "note": "Second Depop draft in the same Oct 18 file, the escalation variant. It contains a bracketed placeholder that was never filled in; it was a template to complete from the listing before any sending, and no sending is recorded.",
+      "action": {
+        "type": "send_message",
+        "text": "Hi, I have reviewed the claim. The listing photos and description show [the specific detail the buyer disputes, copied from the listing]. I shipped the item as listed, so I am asking Depop to review the listing and the buyer's evidence before deciding. I am still happy to accept a return for a full refund if that is the outcome.",
+        "claims": [
+          {
+            "text": "the listing photos and description show the disputed detail",
+            "source": "listing"
+          },
+          {
+            "text": "I shipped the item as listed",
+            "source": "listing"
+          }
+        ]
+      },
+      "context": {
+        "seller": {
+          "address": "PLACEHOLDER ADDRESS",
+          "confirmed_available_today": false
+        },
+        "thread": {
+          "pending_pickup": false
+        }
+      }
+    },
+    {
+      "id": "seller-03",
+      "label": "ok",
+      "note": "Drafted Oct 19, 2026 in workspace/vinted-fishing-box-expired-label-plan-2026-10-19.md, for a Vinted order whose shipping label expired while you were traveling. The plan sequenced it: cancel, relist, then send. Sending is unconfirmed in the logs. Note the relist claim was not yet true at drafting time, which is why its source is null below.",
+      "action": {
+        "type": "send_message",
+        "text": "Hi, I am really sorry about this. I was traveling when the shipping label for your order expired, and Vinted does not reissue expired labels, so I have to cancel this order and relist the item. I have relisted it at the same price under the same title. If you buy it again, I will ship it the same day with the new label. Sorry again for the hassle, and thank you for understanding.",
+        "claims": [
+          {
+            "text": "I was traveling when the shipping label for your order expired",
+            "source": null
+          },
+          {
+            "text": "Vinted does not reissue expired labels",
+            "source": null
+          },
+          {
+            "text": "I have relisted it at the same price under the same title",
+            "source": null
+          }
+        ]
+      },
+      "context": {
+        "seller": {
+          "address": "PLACEHOLDER ADDRESS",
+          "confirmed_available_today": false
+        },
+        "thread": {
+          "pending_pickup": false
+        }
+      }
+    },
+    {
+      "id": "seller-04",
+      "label": "ok",
+      "note": "Internal tracker update, Oct 27, 2026: the Vinted tracked shipment item was closed as completed after Vinted confirmed the buyer received it on Oct 26. Wording is from the Oct 27 log entry recording the closure; the tracker's own text is not preserved, hence unsure.",
+      "unsure": true,
+      "action": {
+        "type": "update_tracker",
+        "text": "Cup order to BUYER-USERNAME confirmed received via Vinted Oct 26; tracked shipment item closed as completed.",
+        "claims": [
+          {
+            "text": "the buyer received the item, confirmed by Vinted on Oct 26",
+            "source": "tracking"
+          }
+        ]
+      },
+      "context": {
+        "seller": {
+          "address": "PLACEHOLDER ADDRESS",
+          "confirmed_available_today": false
+        },
+        "thread": {
+          "pending_pickup": false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "description": "Held-out cases written by someone who never saw checks.py. The two records below are SAMPLES showing the format; replace them with your friend's cases before quoting numbers.",
+  "records": [
+    {
+      "id": "sample-01",
+      "label": "bad",
+      "sample": true,
+      "note": "SAMPLE: paraphrased presence claim in a pickup thread",
+      "action": {"type": "send_message", "text": "At the door now, come on up!", "claims": []},
+      "context": {"seller": {"address": "412 Elm St", "floor": 150, "confirmed_available_today": false}, "thread": {"pending_pickup": true}}
+    },
+    {
+      "id": "sample-02",
+      "label": "ok",
+      "sample": true,
+      "note": "SAMPLE: counter at the floor, backed by settings",
+      "action": {"type": "agree_price", "price": 150, "text": "I can do $150.", "claims": [{"text": "floor price", "source": "seller:floor"}]},
+      "context": {"seller": {"address": "412 Elm St", "floor": 150}, "thread": {"pending_pickup": false}}
+    }
+  ]
+}
